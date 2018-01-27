@@ -3,3 +3,20 @@
 3, Struct of platform
 4, muiltprocessing
 5, https://www.cnblogs.com/zingp/p/5878330.html
+
+Nuitka
+
+Nuitka 是一个Python的替代品，一些团队正用它做完全的Python编译工具，并尝试将Python代码转译为其它可高速运行的编程语言。Nuitka(nuitka.net)可以将python代码转换为C++代码，然后编译为可执行文件，并通过直接调用python的api的方式实现从解析语言到编译语言的转换，并且在转换到C++的过程中直接使用python的解释器，可以保证100%的语法兼容。虽然这限制了它的可移植性，但不可否认这个转换的速度获得了肯定。
+相关链接：http://nuitka.net/
+
+Cython
+
+Cython是Python 的C语言扩展。准确说Cython是单独的一门语言，专门用来写在Python里面import用的扩展库。实际上Cython的语法基本上跟Python一致，而Cython有专门的编译器:先将 Cython代码转变成C(自动加入了一大堆的C-Python API)，然后使用C编译器编译出最终的Python可调用的模块。不过Cython的缺点是，你并不能真正编写Python代码，这样一来，现有代码将不会完全自动转移成功。
+也就是说，Cython在提速方面有很大优势，它是一个用来快速生成Python扩展模块(extention module)的工具。而在Cython，C里的类型，如int,float,long，char*等都会在必要的时候自动转成python对象，或者从python对象转成C类型，在转换失败时会抛出异常，这正是Cython最神奇的地方。另外，Cython对回调函数的支持也很好。总之，如果你有写python扩展模块的需求，那么Cython真的是一个很好的工具。
+相关链接：http://cython.org/
+
+Neo4j python扩展
+
+Mysql python扩展
+
+mongo python扩展
